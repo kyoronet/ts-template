@@ -1,0 +1,6 @@
+{
+  "inputFiles": ["./src"],
+  "mode": "modules",
+  "out": "doc",
+  "exclude": "**/*+(index|.spec|.e2e).ts"
+}

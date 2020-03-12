@@ -1,6 +1,9 @@
 {
   "recommendations": [
     "dbaeumer.vscode-eslint",
-    "EditorConfig.editorconfig"
+    "EditorConfig.editorconfig",
+    "streetsidesoftware.code-spell-checker",
+    "visualstudioexptteam.vscodeintellicode",
+    "wix.vscode-import-cost",
   ]
 }

@@ -1,22 +1,25 @@
 module.exports = {
-  root: true,
   env: {
-    browser: true,
+    browser: false,
     node: true
   },
-  parserOptions: {
-    parser: 'babel-eslint'
-  },
+  parser: '@typescript-eslint/parser',
   extends: [
     'plugin:@typescript-eslint/recommended',
     'plugin:prettier/recommended'
   ],
-  plugins: [
-    'prettier'
-  ],
   rules: {
-    // '@typescript-eslint/indent': 'off',
-    // 'prettier/prettier': 'error',
-    // 'no-console': 'off'
+    '@typescript-eslint/no-inferrable-types': 'off',
+    '@typescript-eslint/explicit-function-return-type': 'off',
+    '@typescript-eslint/member-delimiter-style': 'off',
+    '@typescript-eslint/no-empty-interface': 'off',
+    '@typescript-eslint/no-explicit-any': 'off',
+    '@typescript-eslint/no-var-requires': 'off',
+    '@typescript-eslint/no-unused-vars': [
+      'error',
+      {
+        argsIgnorePattern: '^_'
+      }
+    ]
   }
 }

@@ -1,13 +1,19 @@
 module.exports = {
-  moduleNameMapper: {
-    '^@/(.*)$': '<rootDir>/$1',
-    '^~/(.*)$': '<rootDir>/$1'
+  globals: {
+    'ts-jest': {
+      tsConfig: 'tsconfig.json'
+    }
   },
-  moduleFileExtensions: ['js', 'ts', 'json'],
+  roots: ['<rootDir>/src'],
+  testEnvironment: 'node',
+  testMatch: ['<rootDir>/src/**/*.(test|spec).(ts|js)'],
+  moduleFileExtensions: ['js', 'ts'],
   transform: {
-    '^.+\\.js$': 'babel-jest',
     '^.+\\.ts$': 'ts-jest'
   },
+  transformIgnorePatterns: ['<rootDir>/node_modules/'],
   collectCoverage: true,
-  collectCoverageFrom: ['<rootDir>/src/**/*.[jt]s']
+  collectCoverageFrom: ['<rootDir>/src/**/*.[jt]s'],
+  silent: true,
+  verbose: true
 }

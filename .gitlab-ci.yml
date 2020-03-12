@@ -1,0 +1,30 @@
+image: node:12.16.1
+
+cache:
+  paths:
+    - node_modules/
+
+test:
+  stage: test
+  script:
+    - yarn install
+    - yarn lint
+    - yarn doc
+    - yarn test
+  coverage: /All files[^|]*\|[^|]*\s+([\d\.]+)/
+  artifacts:
+    untracked: true
+
+pages:
+  stage: deploy
+  dependencies:
+    - test
+  script:
+    - mv doc/ public/
+    - mv coverage/ public/
+  artifacts:
+    paths:
+      - public
+    expire_in: 30 days
+  only:
+    - master

@@ -1,3 +1,6 @@
+# builds
+/dist
+
 # General
 .DS_Store
 .AppleDouble
@@ -97,4 +100,14 @@ typings/
 # dotenv environment variables file
 .env
 
-/dist
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# dotenv environment variables file
+.env
+
+# documentation generate directory
+/doc

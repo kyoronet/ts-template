@@ -1,8 +1,10 @@
 {
   "name": "ts-template",
-  "version": "1.0.0",
-  "description": "",
-  "main": "dist/index.js",
+  "version": "0.5.0",
+  "description": "ts-template",
+  "main": "dist/main.js",
+  "repository": "https://github.com/kyoronet/sv-type.git",
+  "author": "kyoronet <42742556+kyoronet@users.noreply.github.com>",
   "private": true,
   "scripts": {
     "start": "node .",
@@ -11,26 +13,24 @@
     "dev:node": "nodemon --watch dist .",
     "build": "tsc",
     "lint": "eslint --ext .js,.ts --ignore-path .gitignore .",
-    "test": "jest"
-  },
-  "devDependencies": {
-    "@types/jest": "^24.0.18",
-    "@types/koa": "^2.0.50",
-    "@types/node": "^12.7.12",
-    "@typescript-eslint/eslint-plugin": "^2.3.3",
-    "@typescript-eslint/parser": "^2.3.3",
-    "concurrently": "^5.0.0",
-    "eslint": "^6.5.1",
-    "eslint-config-prettier": "^6.4.0",
-    "eslint-plugin-prettier": "^3.1.1",
-    "jest": "^24.9.0",
-    "nodemon": "^1.19.3",
-    "prettier": "^1.18.2",
-    "ts-jest": "^24.1.0",
-    "ts-node": "^8.4.1",
-    "typescript": "^3.6.4"
+    "test": "jest",
+    "doc": "typedoc"
   },
   "dependencies": {
-    "koa": "^2.10.0"
+    "@types/jest": "^25.1.4",
+    "@types/node": "^13.9.0",
+    "@typescript-eslint/eslint-plugin": "^2.23.0",
+    "@typescript-eslint/parser": "^2.23.0",
+    "concurrently": "^5.1.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "jest": "^25.1.0",
+    "nodemon": "^2.0.2",
+    "prettier": "^1.19.1",
+    "ts-jest": "^25.2.1",
+    "ts-node": "^8.6.2",
+    "typedoc": "^0.16.11",
+    "typescript": "^3.8.3"
   }
 }
